@@ -25,7 +25,7 @@ def pregunta_01():
     print(y.shape)
 
     # Imprima las dimensiones de `X`
-    print(X.shape.shape)
+    print(X.shape)
 
     # Transforme `y` a un array de numpy usando reshape
     y_reshaped = y.reshape(-1, -1)
