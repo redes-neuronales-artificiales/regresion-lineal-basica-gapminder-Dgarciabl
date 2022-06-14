@@ -85,23 +85,23 @@ def pregunta_03():
     from sklearn import linearRegression
 
     # Cree una instancia del modelo de regresión lineal
-    reg = ____
+    reg = linearRegression()
 
     # Cree El espacio de predicción. Esto es, use linspace para crear
     # un vector con valores entre el máximo y el mínimo de X_fertility
-    prediction_space = ____(
-        ____,
-        ____,
-    ).reshape(____, _____)
+    prediction_space = np.linspace(
+        max(X_fertility),
+        min(X_fertility),
+    ).reshape(-1, 1)
 
     # Entrene el modelo usando X_fertility y y_life
-    reg.fit(____, ____)
+    reg.fit(X_fertility, y_life)
 
     # Compute las predicciones para el espacio de predicción
     y_pred = reg.predict(prediction_space)
 
     # Imprima el R^2 del modelo con 4 decimales
-    print(____.score(____, ____).round(____))
+    print(reg.score(X_fertility, y_life).round(4))
 
 
 def pregunta_04():
