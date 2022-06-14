@@ -82,7 +82,7 @@ def pregunta_03():
     y_life = df["life"].values
 
     # Importe LinearRegression
-    from sklearn import LinearRegression
+    from sklearn.linear_model import LinearRegression
 
     # Cree una instancia del modelo de regresión lineal
     reg = LinearRegression()
@@ -128,7 +128,7 @@ def pregunta_04():
 
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 53. El tamaño de la muestra de entrenamiento es del 80%
-    (X_train, X_test, y_train, y_test,) = train_test_split(
+    X_train, X_test, y_train, y_test = train_test_split(
         X_fertility,
         y_life,
         test_size=0.2,
