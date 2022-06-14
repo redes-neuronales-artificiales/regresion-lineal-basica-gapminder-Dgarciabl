@@ -76,10 +76,10 @@ def pregunta_03():
     df = pd.read_csv('gm_2008_region.csv')
 
     # Asigne a la variable los valores de la columna `fertility`
-    X_fertility = df["fertility"].values
+    X_fertility = np.array(df['fertility']).reshape(-1,1)
 
     # Asigne a la variable los valores de la columna `life`
-    y_life = df["life"].values
+    y_life = np.array(df['life']).reshape(-1,1)
 
     # Importe LinearRegression
     from sklearn.linear_model import LinearRegression
@@ -141,7 +141,7 @@ def pregunta_04():
     linearRegression.fit(X_train, y_train)
 
     # Pronostique y_test usando X_test
-    y_pred = LinearRegression.predict(X_test)
+    y_pred = linearRegression.predict(X_test)
 
     # Compute and print R^2 and RMSE
     print("R^2: {:6.4f}".format(linearRegression.score(X_test, y_test)))
