@@ -82,10 +82,10 @@ def pregunta_03():
     y_life = df["life"].values
 
     # Importe LinearRegression
-    from sklearn import linearRegression
+    from sklearn import LinearRegression
 
     # Cree una instancia del modelo de regresión lineal
-    reg = linearRegression()
+    reg = LinearRegression()
 
     # Cree El espacio de predicción. Esto es, use linspace para crear
     # un vector con valores entre el máximo y el mínimo de X_fertility
@@ -113,7 +113,9 @@ def pregunta_04():
     # Importe LinearRegression
     # Importe train_test_split
     # Importe mean_squared_error
-    from ____ import ____
+    from sklearn.model_selection import train_test_split
+    from sklearn.linear_model import LinearRegression
+    from sklearn.metrics import mean_squared_error
 
     # Lea el archivo `gm_2008_region.csv` y asignelo al DataFrame `df`
     df = ____
